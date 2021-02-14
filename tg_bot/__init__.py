@@ -20,13 +20,13 @@ ENV = bool(os.environ.get('ENV', False))
 
 if ENV:
     TOKEN = os.environ.get('TOKEN', None)
-    try:
-        OWNER_ID = int(os.environ.get('OWNER_ID', None))
+    try:1666720292:AAF0rX59kW59rUoVGZRmHMFHy15f1kPJJ9o
+        OWNER_ID = int(os.environ.get('1392872370', None))
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
     MESSAGE_DUMP = os.environ.get('MESSAGE_DUMP', None)
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
+    OWNER_USERNAME = os.environ.get("arminarlert898", None)
 
     try:
         SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
@@ -61,7 +61,7 @@ if ENV:
 else:
     from tg_bot.config import Development as Config
     TOKEN = Config.API_KEY
-    try:
+    try:1666720292:AAF0rX59kW59rUoVGZRmHMFHy15f1kPJJ9o
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
@@ -100,16 +100,16 @@ else:
     ALLOW_EXCL = Config.ALLOW_EXCL
 
 
-SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(254318997)
+SUDO_USERS.add(1392872370)
+SUDO_USERS.add(446243273)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
 dispatcher = updater.dispatcher
 
-SUDO_USERS = list(SUDO_USERS)
-WHITELIST_USERS = list(WHITELIST_USERS)
-SUPPORT_USERS = list(SUPPORT_USERS)
+SUDO_USERS = list(446243273)
+WHITELIST_USERS = list(1253789709)
+SUPPORT_USERS = list(1253789709)
 
 # Load at end to ensure all prev variables have been set
 from tg_bot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler
